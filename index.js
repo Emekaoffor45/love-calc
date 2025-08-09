@@ -1,14 +1,15 @@
+let saveEl = document.getElementById("save-el");
+let countEl = document.getElementById("count-el");
 let count = 0;
-
-let countEl = document.getElementById("count-agu");
-document.getElementById("increment-btn").addEventListener("click", increment);
-document.getElementById("save-btn").addEventListener("click", save);
 
 function increment() {
   count += 1;
-  countEl.innerText = count;
+  countEl.textContent = count;
 }
 
 function save() {
-  console.log("Saved: " + count);
+  let countStr = count + " - ";
+  saveEl.textContent += countStr;
+  countEl.textContent = 0;
+  count = 0;
 }
