@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,18 +8,32 @@
   </head>
   <body>
     <div
-      class="bg-lime-700 flex flex-col items-center justify-center h-screen space-y-4"
+      class="flex flex-col border-[10px] border-white items-center justify-center bg-[url('./img/richy.jpg')] bg-cover bg-center h-screen space-y-4"
     >
-      <h1 class="text-3xl font-bold text-white">Hello, enter any number</h1>
-      <button id="count-agu" class="text-4xl font-bold text-white">0</button>
+      <h1 class="text-3xl font-bold text-white">People Counter:</h1>
+      <h2 id="count-el" class="text-white font-bold text-6xl">0</h2>
+
+      <!-- INCREASE button with hover effect -->
       <button
         id="increment-btn"
-        class="bg-lime-500 text-white px-4 py-2 rounded-lg hover:bg-lime-600"
+        class="rounded bg-white px-4 font-bold py-2 underline text-black hover:bg-gray-200 hover:scale-105 transition duration-200"
+        onclick="increment()"
       >
-        increment
+        INCREASE
       </button>
-      <button id="save-btn" class="bg-lime-500 text-white px-4 py-2 rounded-lg hover:bg-lime-600">
-        save
+
+      <!-- SAVE button with hover effect -->
+      <button
+        id="save-btn"
+        class="rounded bg-amber-700 font-bold py-2 px-4 underline hover:bg-amber-600 hover:scale-105 transition duration-200"
+        onclick="save()"
+      >
+        SAVE
+      </button>
+
+      <p id="save-el" class="text-white font-bold underline hover:bg-gray-700">
+        Previous Entries:
+      </p>
     </div>
   </body>
 </html>
