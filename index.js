@@ -1,18 +1,2 @@
-let saveEl = document.getElementById("save-el");
-let countEl = document.getElementById("count-el");
-let count = 0;
-
-function increment() {
-  count += 25; // count = 35
-  count -= 5; // count = 30
-  count *= 2; // count = 60
-  count /= 4; // count = 15
-  countEl.textContent = count;
-}
-
-function save() {
-  let countStr = count + " - ";
-  saveEl.textContent += countStr;
-  countEl.textContent = 0;
-  count = 0;
-}
+let num = Math.random() * 10 + 1;
+console.log(num);
