@@ -3,54 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Math Operations</title>
+    <title>Love Calculator</title>
+
+    <!-- JS -->
+    <script src="index.js" defer></script>
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Config for Custom Font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              love: ["Dancing Script", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body
-    class="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800 font-sans"
-  >
-    <!-- Numbers Display -->
-    <div class="mb-6 text-xl font-semibold space-x-4">
-      <span id="num1-el" class="px-4 py-2 bg-white shadow rounded"></span>
-      <span id="num2-el" class="px-4 py-2 bg-white shadow rounded"></span>
+
+  <body class="bg-lime-600 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+      <!-- Title -->
+      <h1 class="text-4xl font-love text-amber-600 mb-6">
+        💖 Love Calculator 💖
+      </h1>
+
+      <!-- Input Fields -->
+      <input
+        type="text"
+        id="name1"
+        placeholder="Enter your name"
+        class="p-2 m-2 rounded-lg bg-lime-600 text-amber-600 placeholder-amber-200 text-center"
+      />
+
+      <input
+        type="text"
+        id="name2"
+        placeholder="Enter partner's name"
+        class="p-2 m-2 rounded-lg bg-lime-600 text-amber-600 placeholder-amber-200 text-center"
+      />
+
+      <!-- Button -->
+      <button
+        onclick="calculateLove()"
+        class="block w-full mt-4 bg-amber-600 text-white py-2 px-4 rounded-lg hover:bg-amber-700 transition"
+      >
+        Calculate 💘
+      </button>
+
+      <!-- Result -->
+      <p id="result" class="mt-4 text-lg font-love text-lime-600"></p>
     </div>
-
-    <!-- Buttons -->
-    <div class="space-x-3 mb-6">
-      <button
-        onclick="add()"
-        class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
-      >
-        Add
-      </button>
-      <button
-        onclick="subtract()"
-        class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
-      >
-        Subtract
-      </button>
-      <button
-        onclick="divide()"
-        class="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 transition"
-      >
-        Divide
-      </button>
-      <button
-        onclick="multiply()"
-        class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
-      >
-        Multiply
-      </button>
-    </div>
-
-    <!-- Result Display -->
-    <span
-      id="sum-el"
-      class="text-lg font-medium bg-white px-4 py-2 shadow rounded"
-    >
-      Sum:
-    </span>
-
-    <script src="index.js"></script>
   </body>
 </html>
